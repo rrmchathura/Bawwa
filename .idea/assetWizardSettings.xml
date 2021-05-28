@@ -307,7 +307,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/C:/Users/Chathura%20Sanjaya/AppData/Local/Android/Sdk/icons/material/materialicons/vpn_key/baseline_vpn_key_24.xml" />
+                                      <entry key="url" value="file:/C:/Users/Chathura%20Sanjaya/AppData/Local/Android/Sdk/icons/material/materialicons/verified_user/baseline_verified_user_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -318,7 +318,7 @@
                         <option name="values">
                           <map>
                             <entry key="color" value="030303" />
-                            <entry key="outputName" value="ic_baseline_vpn_key_24" />
+                            <entry key="outputName" value="ic_baseline_verified_user_24" />
                             <entry key="sourceFile" value="D:\git_projects\Bawwa" />
                           </map>
                         </option>
