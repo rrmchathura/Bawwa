@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Bauwa</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="google_maps_API_key">AIzaSyBg_wNc2DDP_q1ca_EgBmoifoaA2poiLtw</string>
+
+    <!--onbording screen titles-->
+    <string name="first_side_title">Your post may help to find a new home to him .</string>
+    <string name="second_side_title">You can add a post about him on "Bawwa" to find people who are willing to help .</string>
+    <string name="third_side_title">Found an innocent stray dog who need help ?</string>
+    <string name="fouth_side_title">Take a photo of him and upload it .</string>
+</resources>

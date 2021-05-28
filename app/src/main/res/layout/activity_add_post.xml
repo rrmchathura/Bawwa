@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddPostActivity">
+
+    <include
+        android:id="@+id/main_toolbar"
+        layout="@layout/app_toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_toolbar"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/add_post_location"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/input_style"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Location"
+                android:maxLines="100"
+                android:padding="10dp"
+                android:textSize="20sp"
+                android:layout_marginBottom="20dp"/>
+
+            <EditText
+                android:id="@+id/add_post_shop"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/input_style"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Shop Name"
+                android:maxLines="100"
+                android:padding="10dp"
+                android:textSize="20sp"
+                android:layout_marginBottom="20dp"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/add_post_time"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/input_style"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Open Time"
+                android:maxLines="100"
+                android:padding="10dp"
+                android:textSize="20sp"
+                android:layout_marginBottom="20dp"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/add_post_contact"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/input_style"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Contact"
+                android:maxLines="100"
+                android:padding="10dp"
+                android:textSize="20sp"
+                android:layout_marginBottom="20dp"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/add_post_description"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/input_style"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Important Note..."
+                android:inputType="textMultiLine"
+                android:maxLines="100"
+                android:padding="10dp"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="20dp">
+
+                <ImageView
+                    android:id="@+id/add_post_document"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/input_style"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/add_post_select_document_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Select a Image"
+                    android:textSize="18dp" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/add_post_submit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/button_style"
+                android:text="Submit"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

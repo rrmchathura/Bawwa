@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "565758166171",
+    "project_id": "bauwa-ee604",
+    "storage_bucket": "bauwa-ee604.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:565758166171:android:1b96cdc9dfd4f68856723e",
+        "android_client_info": {
+          "package_name": "com.example.bauwa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "565758166171-45vb9ohh97utt37l3p2ugfppucsctkdk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBajlzVOInnDDbZOP_nRO1wtSsTGIkVfLs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "565758166171-45vb9ohh97utt37l3p2ugfppucsctkdk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
