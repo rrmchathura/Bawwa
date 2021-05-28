@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Bauwa.iml" filepath="$PROJECT_DIR$/.idea/modules/Bauwa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Bauwa.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Bauwa.app.iml" />
+    </modules>
+  </component>
+</project>
