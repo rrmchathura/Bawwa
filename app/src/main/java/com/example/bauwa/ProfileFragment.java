@@ -32,7 +32,7 @@ public class ProfileFragment extends Fragment {
     private View view;
 
     private FirebaseAuth firebaseAuth;
-    private DatabaseReference userDatabaseReference, postDatabaseReference;
+    private DatabaseReference userDatabaseReference, postDatabaseReference,deletePostDatabaseReference;
 
     private TextView textViewName, textViewEmail, textViewPhone;
     private Button msgBtn;
@@ -131,7 +131,7 @@ public class ProfileFragment extends Fragment {
 
                 postViewHolder.acceptBtn.setVisibility(View.GONE);
                 postViewHolder.deleteBtn.setVisibility(View.GONE);
-
+                String postID = getRef(i).getKey();
                 String status = postModel.getStatus();
                 if(status.equals("approved")) {
                     postViewHolder.postTimeNDate.setText(postModel.getPostDate()+" • "+postModel.getPostTime());
@@ -162,6 +162,15 @@ public class ProfileFragment extends Fragment {
                         Picasso.with(getContext()).load(imageUrl).into(postViewHolder.postImage);
                         postViewHolder.postImage.setVisibility(View.VISIBLE);
                     }
+                    postViewHolder.deleteBtn.setVisibility(View.VISIBLE);
+                    postViewHolder.deleteBtn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            deletePostDatabaseReference = FirebaseDatabase.getInstance().getReference().child("Posts").child(postID);
+                            deletePostDatabaseReference.removeValue();
+                        }
+                    });
+
 
                     String userID = postModel.getUserID();
                     userDatabaseReference.child(userID).addValueEventListener(new ValueEventListener() {
