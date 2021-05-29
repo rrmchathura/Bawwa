@@ -1,6 +1,8 @@
 # Bawwa
 Pet care App with firebase
 
+(admin email-admin@admin.com, pass-123456)
+
 ## Splash_Screen
 ![](screenshots/Capture.PNG)
 
