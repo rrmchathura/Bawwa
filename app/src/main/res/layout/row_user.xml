@@ -20,7 +20,7 @@
             android:id="@+id/imageView3"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            app:srcCompat="@drawable/profile_icon" />
+            app:srcCompat="@drawable/ups" />
 
         <TextView
             android:id="@+id/row_user_username"

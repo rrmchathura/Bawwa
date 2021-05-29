@@ -33,8 +33,7 @@
                     android:id="@+id/imageView4"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
-                    android:src="@drawable/profile_icon"
-                    app:tint="@color/colorPrimary" />
+                    android:src="@drawable/profiles"/>
 
 
                 <TextView
