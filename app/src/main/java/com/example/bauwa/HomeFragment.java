@@ -1,9 +1,11 @@
 package com.example.bauwa;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -121,6 +123,7 @@ public class HomeFragment extends Fragment {
                 .build();
 
         FirebaseRecyclerAdapter<PostModel, PostViewHolder> adapter = new FirebaseRecyclerAdapter<PostModel, PostViewHolder>(options) {
+            @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             protected void onBindViewHolder(@NonNull PostViewHolder postViewHolder, int i, @NonNull PostModel postModel) {
 
@@ -132,6 +135,7 @@ public class HomeFragment extends Fragment {
 
                 postViewHolder.acceptBtn.setText("Message");
                 postViewHolder.deleteBtn.setText("Location");
+
 
                 postViewHolder.deleteBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
