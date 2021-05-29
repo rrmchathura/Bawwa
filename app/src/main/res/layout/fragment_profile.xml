@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileFragment">
+    tools:context=".ProfileFragment"
+    >
+
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true">
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -19,22 +23,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:layout_marginTop="-100dp"
                 android:background="@drawable/card_style"
                 android:orientation="vertical"
                 android:padding="10dp">
+
 
                 <ImageView
                     android:id="@+id/imageView4"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:src="@drawable/profile_icon"
-                    android:tint="@color/colorPrimary"/>
+                    app:tint="@color/colorPrimary" />
+
 
                 <TextView
                     android:id="@+id/profile_fragment_username"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-black"
                     android:gravity="center"
                     android:text="---"
                     android:textSize="24sp"
@@ -44,6 +53,8 @@
                     android:id="@+id/profile_fragment_user_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
                     android:layout_marginTop="5dp"
                     android:gravity="center"
                     android:text="-----"
@@ -55,6 +66,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
                     android:text="-----"
                     android:textSize="20sp" />
 
@@ -62,14 +75,15 @@
                     android:id="@+id/profile_fragment_msg_btn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Messages"
-                    android:textAllCaps="false"
                     android:layout_marginTop="5dp"
-                    android:background="@drawable/input_style"
-                    android:textSize="18dp"/>
-
+                    android:background="@drawable/button_style"
+                    android:text="Messages"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:textSize="18dp" />
 
             </LinearLayout>
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/profile_post_list"
                 android:layout_width="match_parent"

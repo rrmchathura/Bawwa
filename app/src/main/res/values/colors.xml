@@ -17,4 +17,5 @@
     <color name="col_yellow">#CDDC39</color>
     <color name="col_red">#FFF44B3E</color>
     <color name="check">#ff9800</color>
+    <color name="checks">#FFFFFF</color>
 </resources>
