@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +25,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
@@ -32,6 +35,8 @@ public class HomeFragment extends Fragment {
 
     private FirebaseAuth firebaseAuth;
     private DatabaseReference postDatabaseReference, userDatabaseReference;
+
+    private EditText searchBar;
 
     private RecyclerView postList;
 
@@ -76,6 +81,8 @@ public class HomeFragment extends Fragment {
         postDatabaseReference = FirebaseDatabase.getInstance().getReference().child("Posts");
         userDatabaseReference = FirebaseDatabase.getInstance().getReference().child("Users");
 
+        searchBar= view.findViewById(R.id.home_search_bar);
+
         postList = (RecyclerView) view.findViewById(R.id.home_post_list);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
@@ -83,14 +90,34 @@ public class HomeFragment extends Fragment {
         linearLayoutManager.setStackFromEnd(true);
         postList.setLayoutManager(linearLayoutManager);
 
-        LoadPosts();
+        LoadPosts("");
+
+        searchBar.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                String searchInput = searchBar.getText().toString().toLowerCase();
+                LoadPosts(searchInput);
+            }
+        });
 
         return view;
     }
 
-    private void LoadPosts() {
+    private void LoadPosts(String searchBarInput) {
+        Query searchQuery = postDatabaseReference.orderByChild("searchLocation").startAt(searchBarInput).endAt(searchBarInput + "\uf8ff");
+
         FirebaseRecyclerOptions options = new FirebaseRecyclerOptions.Builder<PostModel>()
-                .setQuery(postDatabaseReference, PostModel.class)
+                .setQuery(searchQuery, PostModel.class)
                 .build();
 
         FirebaseRecyclerAdapter<PostModel, PostViewHolder> adapter = new FirebaseRecyclerAdapter<PostModel, PostViewHolder>(options) {

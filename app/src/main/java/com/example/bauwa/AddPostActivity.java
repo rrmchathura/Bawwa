@@ -239,6 +239,7 @@ public class    AddPostActivity extends AppCompatActivity {
         postMap.put("locationLatitude",locationLatitude);
         postMap.put("locationLongitude",locationLongitude);
         postMap.put("currentLocation",currentLocation);
+        postMap.put("searchLocation",currentLocation.toLowerCase());
         postMap.put("status","pending");
         postMap.put("postType",postType);
 
