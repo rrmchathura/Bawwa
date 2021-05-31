@@ -68,7 +68,13 @@ public class RegisterActivity extends AppCompatActivity {
 
         if(name.isEmpty() || phone.isEmpty() || email.isEmpty() || password.isEmpty()) {
             Toast.makeText(this, "Fields Can not be Empty", Toast.LENGTH_SHORT).show();
-        } else {
+        } else if (phone.length() < 10){
+            editTextPhone.requestFocus();
+            editTextPhone.setError("invalid mobile number");
+
+        }
+
+        else {
             loadingBar = new ProgressDialog(this);
             String ProgressDialogMessage="Creating Account...";
             SpannableString spannableMessage=  new SpannableString(ProgressDialogMessage);
